@@ -4,7 +4,6 @@ This directory contains Matlab (R) implementations for methods for boundary dete
 
 The bio-inspired, asynchronous event-based dynamic vision sensor records temporal changes in the luminance of the scene at high temporal resolution. Since events are only triggered at significant luminance changes, most events occur at object boundaries. This paper presents an approach to learn the location of contours and their border ownership using Structured Random Forests on event-based features that encode motion, timing, texture, and spatial orientations. The classifier integrates elegantly information over time by utilizing the classification results previously computed. Finally, the contour detection and boundary assignment are demonstrated in a layer-segmentation of the scene. 
 
-
 ## DVS feature extraction ##
 
 ## Training the SRF ##
@@ -12,6 +11,11 @@ The bio-inspired, asynchronous event-based dynamic vision sensor records tempora
 ## Border ownership and boundary detection ##
 
 ## DVS dataset for benchmarking ## 
+The code uses some data and matfiles that are already available in an external repository at:
+http://www.umiacs.umd.edu/research/POETICON/DVSContours/resources/dataset/complexMotion3.zip. 
+
+The repository contains a README.txt files that explains the contents: dvs data, extracted features, annotated groundtruth, and the results we used in the paper for the boundary detection, assigning border ownership (foreground and background), and the protosegmentation. 
+
 
 ## More documentation ##
 
@@ -30,9 +34,7 @@ Some additional information is available at:
 http://www.umiacs.umd.edu/research/POETICON/DVSContours/
 
 ## Example ##
-
 Please, take a look at reconstructFlow.m for an example that shows in a general way the main functionalities of the repository.
-The code uses some data and matfiles that are already available in the repository (./DATA). Anyway, more sequences and ground-truth can be found in the project site. The example file reconstructFlow also includes some comments to understand how the matfiles with the depth and the DAVIS, RGB-D sensor, and PTU calibration parameters have been computed. Note that, all the parameters should be re-computed with a new configuration.
 
 Please report problems, bugs, or suggestions to
 fbarranco_at_ugr_dot_es (Replace _at_ by @ and _dot_ by .).
