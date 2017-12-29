@@ -41,7 +41,8 @@ The repository contains a README.txt file that explains the contents: event stre
 
 ## More documentation ##
 
-If you use any of the methods, the dataset, or the code, please cite the article
+If you use any of the methods, the dataset, or the code, please cite the article:
+
 F. Barranco, C. L. Teo, C. Fermuller, and Y. Aloimonos. "Contour Detection and Characterization for Asynchronous Event Sensors." In Proceedings of the IEEE International Conference on Computer Vision, pp. 486-494. 2015.
 
 	@inproceedings{barranco_contour_2015,
