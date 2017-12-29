@@ -1,0 +1,2 @@
+setenv('OMP_NUM_THREADS', '8');
+ mex edgesDetectMex.cpp -DUSEOMP -v CXXFLAGS='\$CXXFLAGS -fopenmp' LDFLAGS='\$LDFLAGS -fopenmp'
