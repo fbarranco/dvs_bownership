@@ -25,7 +25,6 @@ http://www.umiacs.umd.edu/research/POETICON/DVSContours/resources/dataset/comple
 
 The repository contains a README.txt file that explains the contents: event streams (dvs data), extracted features, annotated groundtruth, and the results we used in the paper for the boundary detection, assigning border ownership (foreground and background), and the protosegmentation. 
 
-
 ## More documentation ##
 
 If you use any of the methods, the dataset, or the code, please cite the article
@@ -42,8 +41,6 @@ F. Barranco, C. L. Teo, C. Fermuller, and Y. Aloimonos. "Contour Detection and C
 Some additional information is available at:
 http://www.umiacs.umd.edu/research/POETICON/DVSContours/
 
-## Example ##
-Please, take a look at reconstructFlow.m for an example that shows in a general way the main functionalities of the repository.
 
 Please report problems, bugs, or suggestions to
 fbarranco_at_ugr_dot_es (Replace _at_ by @ and _dot_ by .).
