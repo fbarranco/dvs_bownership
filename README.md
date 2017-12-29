@@ -11,16 +11,25 @@ As explained in the paper, our approach uses the following features:
 - Event-based Motion Estimation. Image motion encodes relative depth information useful for assigning border ownership (motion parallax).
 - Event-based time texture. The aim in this case is to separate occlusion edges from texture edges. 
 
-In the current repository, please be advise of the different versions for extracting features called: batch_extractFeatures*.m 
+In the current repository, please be advise of the different versions for extracting features called: *batch_extractFeaturesNUM.m* where NUM refers to the version number (1 to 5)
 
+## Training the Structured Random Forests (SRF) ##
+The training has not been included in this repository. If you are interested in training your SRF please go to:
 
-
-## Training the SRF ##
+http://www.umiacs.umd.edu/~cteo/BOWN_SRF/
 
 ## Border ownership and boundary detection ##
+Boundary detection and border ownership are done using Structured Random Forests. Trained models for the DVS data are available in the *__./model__* folder. 
+Moreover, some files in the repository can be used for seeing how it works: 
+- *estimateBoundaryForVideo.m*: Detection and boundary assignment for the video at:
+
+https://www.youtube.com/watch?v=XTeX_5awL3w   
+
+- *__./demo__*: The folder contains a software for running the contour detection in real time provided the DVS sensor. It uses a more simplified model than the one we used in the paper.
 
 ## DVS dataset for benchmarking ## 
 The code uses some data and matfiles that are already available in an external repository at:
+
 http://www.umiacs.umd.edu/research/POETICON/DVSContours/resources/dataset/complexMotion3.zip. 
 
 The repository contains a README.txt file that explains the contents: event streams (dvs data), extracted features, annotated groundtruth, and the results we used in the paper for the boundary detection, assigning border ownership (foreground and background), and the protosegmentation. 
