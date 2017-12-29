@@ -27,6 +27,11 @@ https://www.youtube.com/watch?v=XTeX_5awL3w
 
 - *__./demo__*: The folder contains a software for running the contour detection in real time provided the DVS sensor. It uses a more simplified model than the one we used in the paper.
 
+The *__./toolbox__* folder is required for running the boundary detection and border ownership. To learn more about that toolbox please go to:
+
+http://vision.ucsd.edu/~pdollar/toolbox/doc/
+
+
 ## DVS dataset for benchmarking ## 
 The code uses some data and matfiles that are already available in an external repository at:
 
