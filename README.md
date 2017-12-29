@@ -1,10 +1,19 @@
 # Border Ownership and Contour Detection for frame-free sensors (DVS)
   
-This directory contains Matlab (R) implementations for methods for boundary detection and border ownership for DVS data.
+This directory contains Matlab (R) implementations for methods for boundary detection and border ownership for event data.
 
-The bio-inspired, asynchronous event-based dynamic vision sensor records temporal changes in the luminance of the scene at high temporal resolution. Since events are only triggered at significant luminance changes, most events occur at object boundaries. This paper presents an approach to learn the location of contours and their border ownership using Structured Random Forests on event-based features that encode motion, timing, texture, and spatial orientations. The classifier integrates elegantly information over time by utilizing the classification results previously computed. Finally, the contour detection and boundary assignment are demonstrated in a layer-segmentation of the scene. 
+The bio-inspired, asynchronous event-based dynamic vision sensor (DVS) records temporal changes in the luminance of the scene at high temporal resolution. Since events are only triggered at significant luminance changes, most events occur at object boundaries. This paper presents an approach to learn the location of contours and their border ownership using Structured Random Forests on event-based features that encode motion, timing, texture, and spatial orientations. The classifier integrates elegantly information over time by utilizing the classification results previously computed. Finally, the contour detection and boundary assignment are demonstrated in a layer-segmentation of the scene. 
 
 ## DVS feature extraction ##
+As explained in the paper, our approach uses the following features: 
+- Event-based Orientation. The intuition is that concave edges often belong to foreground objects. 
+- Event temporal information. Timestamps provide information for tracking contours, defining a surface that encodes locally the direction and speed of image motion. 
+- Event-based Motion Estimation. Image motion encodes relative depth information useful for assigning border ownership (motion parallax).
+- Event-based time texture. The aim in this case is to separate occlusion edges from texture edges. 
+
+In the current repository, please be advise of the different versions for extracting features called: batch_extractFeatures*.m 
+
+
 
 ## Training the SRF ##
 
@@ -14,7 +23,7 @@ The bio-inspired, asynchronous event-based dynamic vision sensor records tempora
 The code uses some data and matfiles that are already available in an external repository at:
 http://www.umiacs.umd.edu/research/POETICON/DVSContours/resources/dataset/complexMotion3.zip. 
 
-The repository contains a README.txt files that explains the contents: dvs data, extracted features, annotated groundtruth, and the results we used in the paper for the boundary detection, assigning border ownership (foreground and background), and the protosegmentation. 
+The repository contains a README.txt file that explains the contents: event streams (dvs data), extracted features, annotated groundtruth, and the results we used in the paper for the boundary detection, assigning border ownership (foreground and background), and the protosegmentation. 
 
 
 ## More documentation ##
